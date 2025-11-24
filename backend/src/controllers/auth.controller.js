@@ -43,10 +43,10 @@ export const signUp = async (req, res) => {
     try {
         // Implement sign-up logic here
         if(!fullName || !email || !password) {
-            res.status(400).json({message : "All fields are required "});
+            return res.status(400).json({message : "All fields are required "});
         }
-        if(password.lenght < 6){
-            res.status(400).json({message: "Password should be of atleast 6 length"});
+        if(password.length < 6){
+            return res.status(400).json({message: "Password should be of atleast 6 length"});
         }
 
         const user = await  User.findOne({email});
@@ -79,7 +79,6 @@ export const signUp = async (req, res) => {
         else{
             res.status(400).json({message:"Invalid user data"});
         }
-        res.send('Sign-up successful');
     } catch (error) {
         console.log("Error in signUp controller" , error.message);
         res.status(500).json({message : "Internal Server Error" });
