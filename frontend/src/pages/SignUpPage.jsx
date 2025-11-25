@@ -2,7 +2,7 @@ import React from 'react'
 import { useAuthStore } from '../store/useAuthStore.js'
 import { Eye, Loader, Mail, MessageSquare , Lock ,EyeOff ,User, Loader2} from 'lucide-react';
 import { Link } from 'react-router-dom';
-import AuthImagePattern from '../components/AuthImagePattern.jsx';
+import AuthImagePattern from '../components/AuthImagePattern';
 import  {toast , Toaster}  from 'react-hot-toast';
 const SignUpPage = () => {
   const [formData, setFormData] = React.useState({

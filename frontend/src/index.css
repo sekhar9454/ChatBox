@@ -1,8 +1,3 @@
-@import "tailwindcss";
-@plugin "daisyui";
-
-
-/* Fix toast hidden behind components */
-#toast-root, .react-hot-toast {
-  z-index: 999999 !important;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
